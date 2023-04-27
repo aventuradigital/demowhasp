@@ -253,7 +253,7 @@ const TicketListItemCustom = ({ ticket }) => {
             />
           )}
           {ticket.status === "open" && (
-            <Tooltip title="Fechar Conversa">
+            <Tooltip title="Cerrar Conversacion">
               <ClearOutlinedIcon
                 onClick={() => handleCloseTicket(ticket.id)}
                 fontSize="small"
@@ -310,7 +310,7 @@ const TicketListItemCustom = ({ ticket }) => {
             />
           )}
           {ticket.status === "pending" && (
-            <Tooltip title="Fechar Conversa">
+            <Tooltip title="Cerrar Combersacion">
               <ClearOutlinedIcon
                 onClick={() => handleCloseTicket(ticket.id)}
                 fontSize="small"
@@ -331,7 +331,7 @@ const TicketListItemCustom = ({ ticket }) => {
             </Tooltip>
           )}
           {ticket.status === "open" && (
-            <Tooltip title="Fechar Conversa">
+            <Tooltip title="Cerrar combersacion">
               <ClearOutlinedIcon
                 onClick={() => handleCloseTicket(ticket.id)}
                 fontSize="small"

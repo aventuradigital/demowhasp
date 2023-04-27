@@ -231,7 +231,7 @@ const CampaignsConfig = () => {
               <>
                 <Grid xs={12} md={6} item>
                   <TextField
-                    label="Atalho"
+                    label="Atajo"
                     variant="outlined"
                     value={variable.key}
                     name="key"
@@ -241,7 +241,7 @@ const CampaignsConfig = () => {
                 </Grid>
                 <Grid xs={12} md={6} item>
                   <TextField
-                    label="Conteúdo"
+                    label="Contenido"
                     variant="outlined"
                     value={variable.value}
                     name="value"
