@@ -17,6 +17,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import YouTube from 'react-youtube';
 
 const useStyles = makeStyles(theme => ({
 	mainPaper: {
@@ -52,23 +53,28 @@ const Helps = () => {
 	}, [])
 
 	const renderVideo = (record) => {
-    const url = `https://www.youtube.com/embed/${record.video}`;
-
-    const handleLoad = (event) => {
-        event.target.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'playVideo' }), '*');
-    }
-
-    return (
-        <iframe
-            style={{ width: 700, height: 500 }}
-            src={url}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            onLoad={handleLoad}
-        />
-    );
+		const url = `https://www.youtube.com/embed/${record.video}`;
+	
+		const handleLoad = (event) => {
+			event.target.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'playVideo' }), '*');
+		}
+	
+		return (
+			<>
+				<iframe
+					style={{ width: 700, height: 500 }}
+					src={url}
+					title="YouTube video player"
+					frameBorder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowFullScreen
+					onLoad={handleLoad}
+				/>
+				<a href={`https://www.youtube.com/watch?v=${record.video}`} target="_blank" rel="noopener noreferrer">
+					<button>Ver Video en YouTube</button>
+				</a>
+			</>
+		);			
 			
 	}
 
